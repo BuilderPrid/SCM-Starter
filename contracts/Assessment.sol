@@ -50,7 +50,7 @@ contract Assessment {
 
         // withdraw the given amount
         balance -= _withdrawAmount;
-
+        owner.transfer(_withdrawAmount);
         // assert the balance is correct
         assert(balance == (_previousBalance - _withdrawAmount));
 
